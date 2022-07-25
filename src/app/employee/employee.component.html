@@ -1,0 +1,25 @@
+<form ngNativeValidate #employee="ngForm" (ngSubmit)="addEmployee(employee)">
+<p>Employee</p>
+<div class="form-group">
+  <table [width]="170" border="1">
+    <tr>
+  <label for=""> Id: </label>
+  <input type="text"  name="id" required ngModel #id="ngModel" class="form-control"  />
+  </tr><tr>
+  <label for=""> Name: </label>
+  <input type="text"  name="firstName" required ngModel #firstName="ngModel" class="form-control" />
+</tr><tr>
+  <label for=""> LastName: </label>
+  <input type="text"  name="lastName" required ngModel #lastName="ngModel" class="form-control" />
+</tr><tr>
+  <label for=""> Age: </label>
+  <input type="text"  name="age" required ngModel #age="ngModel" class="form-control" />
+</tr><tr>
+  <label for="">Designation: </label>
+  <input type="text"  name="designation" required ngModel #designation="ngModel" class="form-control" />
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="submit" class="btn btn-primary" >add Employee</button>
+  </tr>
+</table>
+</div>
+</form>

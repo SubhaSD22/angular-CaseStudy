@@ -1,0 +1,36 @@
+<nav>
+  <a routerLink="/home">HomePage</a>
+ </nav>
+<form ngNativeValidate #controlForm="ngForm" (ngSubmit)=" onSubmit(controlForm)">
+<div class="form-group">
+<table style="background-color: antiquewhite">
+<tr>
+
+     <td>
+      <label for=""> UserName</label>
+    </td>
+    <td>
+      <input type="text" name="userName" required ngModel #userName="ngModel" class="form-control"/>
+     <div class="alert alert-danger" *ngIf="userName.touched && !userName.valid">User Name is Required</div>
+    </td>
+
+</tr>
+<tr>
+
+    <td>
+      <label for="">Password</label>
+    </td>
+    <td>
+      <input type="password"  name="password" required ngModel #password="ngModel" class="form-control"/>
+      <!-- <div class="alert alert-danger" *ngId="!Password.valid">Password is Required</div> -->
+    </td>
+    <tr>
+      <td></td>
+      <td>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </td>
+  </tr>
+</table>
+</div>
+</form>
+
